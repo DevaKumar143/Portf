@@ -1,0 +1,117 @@
+/* Section Background */
+.solutions-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0B3D91, #007bff);
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+/* Container */
+.solutions-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Section Title */
+.solutions-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #FFD700;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Section Intro */
+.solutions-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Solution Card */
+.solution-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* Hover Effect */
+.solution-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+  border: 1px solid #FFD700;
+}
+
+/* Card Title */
+.solution-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #FFD700;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+}
+
+/* Description */
+.solution-desc {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Result */
+.solution-result {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+  background: #0b3357;
+  padding: 8px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+/* Optional: subtle gradient accent on top border */
+.solution-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(90deg, #FFD700, #FF8C00);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .solutions-title { font-size: 2.4rem; }
+  .solutions-intro { font-size: 1rem; margin-bottom: 40px; }
+  .solution-card { padding: 25px 20px; }
+}
+
+@media (max-width: 576px) {
+  .solutions-title { font-size: 2rem; }
+  .solutions-intro { font-size: 0.95rem; }
+  .solution-card { padding: 20px 15px; }
+}
