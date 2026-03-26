@@ -1,96 +1,121 @@
-/* Section Background */
+
+
 .services-section {
-  background: linear-gradient(135deg, #0B3D91, #1E3C72);
-  color: #fff;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Poppins', sans-serif;
-  padding: 80px 20px; 
-  position: relative;
-  overflow: hidden;
+  color: #fff;
+  background: radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.15), transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(0, 123, 255, 0.25), transparent 40%),
+              linear-gradient(135deg, #0a0f2c, #020617 80%);
+
+  min-height: 100vh;
 }
 
-/* Section Title */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.services-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
 .section-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 2.8rem;
-  color: #FFD700; 
-  text-align: center;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  color: #FFD700;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }
 
-/* Section Subtitle */
 .section-subtitle {
   font-size: 1.15rem;
   color: #E0E0E0;
   max-width: 700px;
-  margin: 0 auto 60px auto;
-  text-align: center;
-  line-height: 1.6;
-  opacity: 0.9;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
-/* Row Flex */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px; 
-  justify-content: center;
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: stretch;
 }
 
-/* Service Cards */
+
 .service-card {
-  background: rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
   border-radius: 20px;
-  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
   text-align: center;
-  flex: 1 1 300px; 
-  max-width: 350px;
-  backdrop-filter: blur(10px); /* Glassmorphism */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+  padding: 40px 25px;
+  height: 100%; 
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Hover Effects */
+
+.service-card .card-gradient {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, #FFD700, #FF8C00, #00FFF5, #2563eb);
+  opacity: 0.15;
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+
 .service-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.45);
-  border: 1px solid #FFD700;
-  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 35px 60px rgba(0,0,0,0.25);
 }
 
-/* Service Title */
+
 .service-title {
   font-weight: 800;
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   margin-bottom: 15px;
   color: #FFD700;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.3);
 }
-
-
 
 .service-description {
   font-size: 1rem;
   color: #fff;
-  line-height: 1.6;
-  opacity: 0.95;
+  line-height: 1.7;
+  opacity: 0.9;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
   .section-title { font-size: 2.4rem; }
-  .section-subtitle { font-size: 1.05rem; margin-bottom: 50px; }
-  .service-title { font-size: 1.2rem; }
+  .section-subtitle { font-size: 1.05rem; margin-bottom: 60px; }
+  .service-title { font-size: 1.25rem; }
   .service-description { font-size: 0.95rem; }
-  .row { gap: 25px; }
 }
 
 @media (max-width: 576px) {
   .services-section { padding: 60px 15px; }
-  .service-card { padding: 30px 15px; max-width: 100%; }
+  .service-card { padding: 30px 15px; min-height: auto; }
   .section-title { font-size: 2rem; }
-  .section-subtitle { font-size: 1rem; }
+  .section-subtitle { font-size: 0.95rem; }
 }

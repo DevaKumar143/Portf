@@ -30,7 +30,7 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navbar Links */}
+        
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto text-center">
             {["Home", "About", "Gallery", "Services", "Blog", "Contact"].map(
